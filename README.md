@@ -25,7 +25,7 @@
  
 ## Kontaktc
  
-- **GitHub:** [github.com/sinu-username](https://github.com/germomatt)
+- **GitHub:** (https://github.com/germomatt)
 - **Email:** germo.matt@gmail.com
 
 
