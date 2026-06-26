@@ -42,3 +42,34 @@ FROM sales;
 --quantity, unit price,  total price, channel, store location ja payment method.
 --Mis oli üllatav? Üllatav on viga kogus ühes tabelis, miinusega hinnad, kliendi andmed puudulikud jne.
 --Mis on puudu? Palju andmeid
+
+--===========================================================================
+--LISAÜLESANNE
+--Leian unikaalsed müügitabelid
+SELECT DISTINCT channel
+FROM sales;
+
+-- Vastus : online ja pood
+
+--===========================================================================
+--Tehingute arv iga kauplse kohta
+SELECT store_location, COUNT(*) AS tehingud
+FROM sales
+GROUP BY store_location
+ORDER BY tehingud DESC;
+
+--Vastus  :  4 poe asukohta (1 neist tundmatu)
+--Asukoht : tehingud
+--Tallinn : 5704
+--NULL    : 5204
+--Tartu   : 2708
+--Pärnu   : 1618
+
+--===========================================================================
+--Leian tehingud, kus summa on üle 100 € ja kauplus Tallinnas
+SELECT * 
+FROM sales
+WHERE total_price > 100 AND store_location ='Tallinn'
+ORDER BY total_price DESC;
+
+--Vastus : 4555 vastet tuleb
