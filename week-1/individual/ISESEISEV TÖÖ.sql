@@ -530,20 +530,20 @@ ORDER BY total_price ASC;
 
 KOKKUVÕTE
 
-Meie tabelis on ...15234... rida, millest ...5116... on duplikaadid."
-...1487... tellimusel puudub kliendi ID.
-Suurim müük oli 2170.40 eurot."
-"Leidsime ...305... tellimust, kus summa on 0 või negatiivne."
+--Meie tabelis on ...15234... rida, millest ...5116... on duplikaadid."
+--...1487... tellimusel puudub kliendi ID.
+--Suurim müük oli 2170.40 eurot."
+--"Leidsime ...305... tellimust, kus summa on 0 või negatiivne."
 
 TEADMISTE KONTROLL
 
 1. C - õige
 2. A - õige
 3. D - õige
-4. B või C (õige oleks C) 50%
-5. D vale ( õige on B)
-6. ei teagi vale 
+4. C - õige
+5. D - vale ( õige on B)
+6. pakkumine puudub - vale 
 7. A - õige
 8. C - õige 
 9. B - õige 
-10. vale
+10. pakkumine puudub - vale
