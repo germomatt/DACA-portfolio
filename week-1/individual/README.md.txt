@@ -1,13 +1,12 @@
 # Nädal 1: SQL Basics -- UrbanStyle'i andmete uurimine
 ## Mida ma tegin
-- Uurisin [tabeli nimi] tabelit SQL päringutega
-- Leidsin [peamine leid]
-- Osalesin meeskonna andmemaastiku koostamisel
+- Uurisin Müügiandmete tabelit SQL päringutega
+- Leidsin palju vigu, eelkõige puuduvad andmed ja negatiivsed müüginumbrid
+- Sel nädalal ma ei saanud osaleda meeskonna andmemaastiku koostamisel, kuna olin haige
 ## Peamised õpid
-- [Õppetund 1]
-- [Õppetund 2]
+-sql võimeka filtri kasutamist
 ## Failid
-- `week1_[tabel]_exploration.sql` -- minu SQL päringud
-- `week1_results_screenshot.png` -- tulemuste pilt
+- `week1_müügiandmete uurija_exploration.sql` -- minu SQL päringud
+- `week1_results_screenshot1.png` -- 7 tulemuste pilti
 ## Meeskonna töö
-- [Link meeskonna Data Landscape slaidile]
+- [LIsan hiljem - kuna ise ei osalenud]
