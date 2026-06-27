@@ -9,7 +9,6 @@
 --Palju andmeid on siiski puudu, dubleeritud või lihtsalt vigased
 
 Järeldus: Müügiandmeid on analüüsiks olemas, kuid ennem on vajalik puhastada (duplikaadid, NULL jne)
-- Osalesin meeskonna andmemaastiku koostamisel
 
 Seejärel uurisin Customers Data tabelit, kus sain tulemusi 
 
