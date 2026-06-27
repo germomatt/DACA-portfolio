@@ -27,9 +27,8 @@ Seejärel uurisin Customers Data tabelit, kus sain tulemusi
 - [Olin iseseisvalt üksi nö 2 liikmeline meeskond]
 
 - Soovitused Toomas Kasele
-Pärast UrbanStyle andmestiku analüüsi soovitame enne põhjalikuma ärianalüüsi tegemist parandada andmete kvaliteeti.
-Kõigepealt tuleks kontrollida sales tabeli võimalikke duplikaate, võrreldes kõigi müügiridade arvu unikaalsete invoice_id väärtuste arvuga. Duplikaadid võivad põhjustada käibe ja müügitulemuste ülehindamist.
-Tuleb täiendada andmestiku dokumentatsiooni, et kõik tabelid ja väljad oleksid üheselt mõistetavad ning analüütikud kasutaksid andmeid samadel põhimõtetel.
+Pärast UrbanStyle andmestiku analüüsi soovitan enne põhjalikuma ärianalüüsi tegemist parandada andmete kvaliteeti.
+Näiteks Kontrollida sales tabeli võimalikke duplikaate, võrreldes kõigi müügiridade arvu unikaalsete invoice_id väärtuste arvuga. Duplikaadid põhjustavad palju vale infot.
 
 Kokkuvõte
 Nädala 1 jooksul õppisin kasutama SQL päringuid UrbanStyle andmestiku uurimiseks ning analüüsis müügi- ja kliendiandmeid. Analüüsi käigus tuvastasin mitmeid andmekvaliteedi probleeme, sealhulgas võimalikud duplikaadid, negatiivsed müügisummad, puuduvad kliendi ID-d ja e-posti aadressid. Enne põhjalikuma ärianalüüsi tegemist on soovitatav need probleemid lahendada, et tagada usaldusväärsed analüüsitulemused ja paremad ärilised otsused.
