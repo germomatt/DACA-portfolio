@@ -2,13 +2,11 @@
 ## Mida ma tegin
 - Uurisin sales ja kliendiandmed tabelit SQL päringutega
 - Leidsin 
-Müügikirjeid kokku: 15 234
-
-Suurim tehing: 2170.40 €
-
-Väikseim tehing: -1405.32 €
-
-Puuduv kliendi ID: 1487
+--Tabelis on 15234 rida
+--Tabeli on 12 rida id, sale id, invoice id, sale date, customer id, product id,
+--quantity, unit price,  total price, channel, store location ja payment method.
+--Üllatav on viga kogus ühes tabelis, miinusega hinnad, kliendi andmed puudulikud jne.
+--Palju andmeid on siiski puudu, dubleeritud või lihtsalt vigased
 
 Järeldus: Müügiandmeid on analüüsiks olemas, kuid ennem on vajalik puhastada (duplikaadid, NULL jne)
 - Osalesin meeskonna andmemaastiku koostamisel
@@ -28,3 +26,14 @@ Seejärel uurisin Customers Data tabelit, kus sain tulemusi
 - week1_customers_results_screenshot.pdf -- customers päringute screenshotid
 ## Meeskonna töö
 - [Olin iseseisvalt üksi nö 2 liikmeline meeskond]
+
+- Soovitused Toomas Kasele
+Pärast UrbanStyle andmestiku analüüsi soovitame enne põhjalikuma ärianalüüsi tegemist parandada andmete kvaliteeti.
+Kõigepealt tuleks kontrollida sales tabeli võimalikke duplikaate, võrreldes kõigi müügiridade arvu unikaalsete invoice_id väärtuste arvuga. Duplikaadid võivad põhjustada käibe ja müügitulemuste ülehindamist.
+Tuleb täiendada andmestiku dokumentatsiooni, et kõik tabelid ja väljad oleksid üheselt mõistetavad ning analüütikud kasutaksid andmeid samadel põhimõtetel.
+
+Kokkuvõte
+Nädala 1 jooksul õppisin kasutama SQL päringuid UrbanStyle andmestiku uurimiseks ning analüüsis müügi- ja kliendiandmeid. Analüüsi käigus tuvastasin mitmeid andmekvaliteedi probleeme, sealhulgas võimalikud duplikaadid, negatiivsed müügisummad, puuduvad kliendi ID-d ja e-posti aadressid. Enne põhjalikuma ärianalüüsi tegemist on soovitatav need probleemid lahendada, et tagada usaldusväärsed analüüsitulemused ja paremad ärilised otsused.
+
+Puuduvad andmed
+Hetkel ei ole teada kas negatiivsed müügid tähistavad tagastusi või andmevigu ning miks osadel müügikirjetel puudub kliendi ID. Samuti tuleb täiendada products tabeli analüüsi SQL päringute tegelike tulemustega.
