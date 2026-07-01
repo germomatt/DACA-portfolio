@@ -1,4 +1,4 @@
-# Nädal 1: SQL Cleaning -- UrbanStyle'i andmete uurimine
+# Nädal 2: SQL Cleaning -- UrbanStyle'i andmete uurimine
 
 ## Mida ma tegin
 1. Uurisin **`sales`** (ja loodud testkoopiat **`sales_test`**) tabelit SQL päringutega.
