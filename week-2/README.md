@@ -2,8 +2,10 @@
 
 ## Mida ma tegin
 1. Uurisin **`sales`** (ja loodud testkoopiat **`sales_test`**) tabelit SQL päringutega.
-2. Leidsin kokku **5500 andmekvaliteedi probleemi**. Peamine leid oli **4013 duplikaatarvet** (`invoice_id`), mis moonutasid otseselt finantsnäitajaid, ning **1487 puuduvat kliendiviidet** (NULL `customer_id`), mis edasisel analüüsil osutusid külalisostudeks.
-3. Osalesin meeskonna andmemaastiku koostamisel ja puhastasin andmestiku: eemaldasin duplikaadid (jättes igast arvest alles vaid esimese rea `MIN(id)` abil), mille tulemusel jäi esialgsest 15 234 reast alles **10 118 korrektset unikaalset rida**.
+2. Õppe eesmärgil uurisin ka teisi tiimiliikme rolli Uurisin **`products`** (ja loodud testkoopiat **`products_test`**) tabelit SQL päringutega.
+3. Leidsin kokku **5500 andmekvaliteedi probleemi**. Peamine leid oli **4013 duplikaatarvet** (`invoice_id`), mis moonutasid otseselt finantsnäitajaid, ning **1487 puuduvat kliendiviidet** (NULL `customer_id`), mis edasisel analüüsil osutusid külalisostudeks.
+Lisaks leidsin, et toodetel on 12 duplikaatset nime mis vajavad puhastamist.
+4. Osalesin meeskonna andmemaastiku koostamisel ja puhastasin andmestiku: eemaldasin duplikaadid (jättes igast arvest alles vaid esimese rea `MIN(id)` abil), mille tulemusel jäi esialgsest 15 234 reast alles **10 118 korrektset unikaalset rida**.
 
 ## Peamised õpid
 4. **Õppisin õigeid SQL-i tehnikaid ja puhastusprotsessi loogikat:**
