@@ -16,7 +16,7 @@ KATEGOORIA              | ARV   | KIRJELDUS
 
 \------------------------------------------------------------------------
 
-Duplikaadid             | 4013  | Korduvad invoice\_id (topelttellimused)
+Duplikaadid             | 4013  | Korduvad invoice\_id (topelttellimused) // mis asuvad 5116 duplikaatreal
 
 NULL customer\_id        | 1487  | Puuduv kliendi viide
 
