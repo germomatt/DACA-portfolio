@@ -8,7 +8,7 @@ Lisaks leidsin, et toodetel on 12 duplikaatset nime mis vajavad puhastamist.
 4. Osalesin meeskonna andmemaastiku koostamisel ja puhastasin andmestiku: eemaldasin duplikaadid (jättes igast arvest alles vaid esimese rea `MIN(id)` abil), mille tulemusel jäi esialgsest 15 234 reast alles **10 118 korrektset unikaalset rida**.
 
 ## Peamised õpid
-4. **Õppisin õigeid SQL-i tehnikaid ja puhastusprotsessi loogikat:**
+**Õppisin õigeid SQL-i tehnikaid ja puhastusprotsessi loogikat:**
    * Duplikaatide otsimiseks ei piisa `WHERE veerg IS NULL` tingimusest (see leiab vaid tühje lahtreid), vaid kasutada tuleb `GROUP BY` ja `HAVING COUNT(*) > 1` loogikat.
    * Andmepuhastust on kõige mõistlikum alustada duplikaatide eemaldamisest, sest see säästab vaeva ja vähendab automaatselt teiste probleemide (nt NULL väärtuste) koguarvu.
    * Iga NULL väärtus ei ole ilmtingimata andmeviga. Näiteks puuduv `customer_id` esindas meie äriloogikas täiesti kehtivaid külalisoste (neid jäi pärast duplikaatide eemaldamist alles 988).
