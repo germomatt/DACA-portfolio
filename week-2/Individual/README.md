@@ -1,23 +1,50 @@
-# Nädal 2: SQL Cleaning -- UrbanStyle'i andmete uurimine
+# 📊 Nädal 2: SQL Andmepuhastus — UrbanStyle
 
-## Mida ma tegin
-1. Uurisin **`sales`** (ja loodud testkoopiat **`sales_test`**) tabelit SQL päringutega.
-2. Õppe eesmärgil uurisin ka teisi tiimiliikme rolli Uurisin **`products`** (ja loodud testkoopiat **`products_test`**) tabelit SQL päringutega.
-3. Leidsin kokku **5500 andmekvaliteedi probleemi**. Peamine leid oli **4013 duplikaatarvet** (`invoice_id`), mis asusid omakorda 5116 duplikaatreal ning mis omakorda moonutasid otseselt finantsnäitajaid, ning **1487 puuduvat kliendiviidet** (NULL `customer_id`), mis edasisel analüüsil osutusid külalisostudeks.
-Lisaks leidsin, et toodetel on 12 duplikaatset nime mis vajavad puhastamist.
-4. Osalesin meeskonna andmemaastiku koostamisel ja puhastasin andmestiku: eemaldasin duplikaadid (jättes igast arvest alles vaid esimese rea `MIN(id)` abil), mille tulemusel jäi esialgsest 15 234 reast alles **10 118 korrektset unikaalset rida**.
+Käesoleva nädala eesmärk oli UrbanStyle'i müügi- ja tootmisandmete analüüs ning andmekvaliteedi tagamine SQL päringute abil. Töö teostamiseks lõin andmebaasi testkoopiad `sales_test` ja `products_test`.
 
-## Peamised õpid
-**Õppisin õigeid SQL-i tehnikaid ja puhastusprotsessi loogikat:**
-   * Duplikaatide otsimiseks ei piisa `WHERE veerg IS NULL` tingimusest (see leiab vaid tühje lahtreid), vaid kasutada tuleb `GROUP BY` ja `HAVING COUNT(*) > 1` loogikat.
-   * Andmepuhastust on kõige mõistlikum alustada duplikaatide eemaldamisest, sest see säästab vaeva ja vähendab automaatselt teiste probleemide (nt NULL väärtuste) koguarvu.
-   * Iga NULL väärtus ei ole ilmtingimata andmeviga. Näiteks puuduv `customer_id` esindas meie äriloogikas täiesti kehtivaid külalisoste (neid jäi pärast duplikaatide eemaldamist alles 988).
+---
 
-## Failid
-- `week2_sales_cleaning.sql` -- minu sales SQL päringud
-- `week2_products_cleaning.sql` -- minu products SQL päringud
-- `week2_sales_report.md`    -- minu puhastusraporti kokkuvõte
-- `week2_products_report.md`    -- minu puhastusraporti kokkuvõte
+## 🔍 Mida ma tegin & Peamised leiud
 
-## Meeskonna töö
-- [(https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/week-2/README.md)]
+Analüüsi käigus tuvastasin andmetest kokku **5500 kvaliteediprobleemi**. 
+
+| Kategooria | Probleemide arv | Kirjeldus / Mõju ärile |
+| :--- | :---: | :--- |
+| **Duplikaadid** | 4013 | Korduvad `invoice_id` väärtused (asuvad 5116 duplikaatreal). Moonutavad otseselt finantsraporteid ja käivet. |
+| **NULL `customer_id`** | 1487 | Puuduvad kliendiviited. Detailsem analüüs näitas, et tegu on legitiimsete külalisostudega. |
+| **Toote duplikaadid** | 12 | Kattuvad tootenimed `products` tabelis, mis vajavad ühtlustamist. |
+
+### 🧼 Teostatud andmepuhastus:
+* **Eemaldasin duplikaadid:** Kasutasin `GROUP BY` ja `MIN(id)` loogikat, jättes igast arvest alles vaid esimese unikaalse rea.
+* **Tulemus:** Esialgsest 15 234 reast jäi järele **10 118 korrektset ja unikaalset rida**.
+* Õppe eesmärgil analüüsisin lisaks enda rollile ka tiimiliikme hallatavat `products` tabelit.
+
+---
+
+## 💡 Peamised õppetunnid (SQL Insights)
+
+> [!TIP]
+> **Kuldreegel:** Andmepuhastust alusta alati duplikaatidest. Nende eemaldamine vähendab sageli automaatselt ka teiste vigade (nt NULL-väärtuste) hulka.
+
+* **Duplikaatide tuvastamine:** Õppisin, et duplikaatide leidmiseks ei piisa `IS NULL` kontrollist. Kasutama peab `GROUP BY` ja `HAVING COUNT(*) > 1` süntaksit:
+  ```sql
+  SELECT invoice_id, COUNT(*) 
+  FROM sales_test 
+  GROUP BY invoice_id 
+  HAVING COUNT(*) > 1;
+Äriloogika mõistmine: Iga NULL ei ole andmeviga. Puuduv customer_id tähistas meie süsteemis külalisoste (pärast duplikaatide puhastamist jäi neid süsteemi alles täpselt 988).
+
+📂 Projekti failid
+Kõik minu kirjutatud skriptid ja detailsemad raportid leiad siit:
+
+🛠️ `week2_sales_cleaning.sql` -- minu sales SQL päringud
+
+🛠️ `week2_products_cleaning.sql` -- minu products SQL päringud
+
+📄 `week2_sales_report.md`    -- minu puhastusraporti kokkuvõte
+
+📄 `week2_products_report.md`    -- minu puhastusraporti kokkuvõte
+
+
+👥 Meeskonnatöö
+🔗 (https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/week-2/README.md) - Nädal 2 README
