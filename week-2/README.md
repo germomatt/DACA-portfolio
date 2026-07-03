@@ -20,4 +20,4 @@ Lisaks leidsin, et toodetel on 12 duplikaatset nime mis vajavad puhastamist.
 - `week1_products_report.md`    -- minu puhastusraporti kokkuvõte
 
 ## Meeskonna töö
-- [week-2/README.md]
+- [(https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/week-2/README.md)]
