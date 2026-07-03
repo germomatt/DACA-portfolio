@@ -1,0 +1,23 @@
+# Nädal 2: SQL Cleaning -- UrbanStyle'i andmete uurimine
+
+## Mida ma tegin
+1. Uurisin **`sales`** (ja loodud testkoopiat **`sales_test`**) tabelit SQL päringutega.
+2. Õppe eesmärgil uurisin ka teisi tiimiliikme rolli Uurisin **`products`** (ja loodud testkoopiat **`products_test`**) tabelit SQL päringutega.
+3. Leidsin kokku **5500 andmekvaliteedi probleemi**. Peamine leid oli **4013 duplikaatarvet** (`invoice_id`), mis asusid omakorda 5116 duplikaatreal ning mis omakorda moonutasid otseselt finantsnäitajaid, ning **1487 puuduvat kliendiviidet** (NULL `customer_id`), mis edasisel analüüsil osutusid külalisostudeks.
+Lisaks leidsin, et toodetel on 12 duplikaatset nime mis vajavad puhastamist.
+4. Osalesin meeskonna andmemaastiku koostamisel ja puhastasin andmestiku: eemaldasin duplikaadid (jättes igast arvest alles vaid esimese rea `MIN(id)` abil), mille tulemusel jäi esialgsest 15 234 reast alles **10 118 korrektset unikaalset rida**.
+
+## Peamised õpid
+**Õppisin õigeid SQL-i tehnikaid ja puhastusprotsessi loogikat:**
+   * Duplikaatide otsimiseks ei piisa `WHERE veerg IS NULL` tingimusest (see leiab vaid tühje lahtreid), vaid kasutada tuleb `GROUP BY` ja `HAVING COUNT(*) > 1` loogikat.
+   * Andmepuhastust on kõige mõistlikum alustada duplikaatide eemaldamisest, sest see säästab vaeva ja vähendab automaatselt teiste probleemide (nt NULL väärtuste) koguarvu.
+   * Iga NULL väärtus ei ole ilmtingimata andmeviga. Näiteks puuduv `customer_id` esindas meie äriloogikas täiesti kehtivaid külalisoste (neid jäi pärast duplikaatide eemaldamist alles 988).
+
+## Failid
+- `week1_sales_cleaning.sql` -- minu sales SQL päringud
+- `week1_products_cleaning.sql` -- minu products SQL päringud
+- `week1_sales_report.md`    -- minu puhastusraporti kokkuvõte
+- `week1_products_report.md`    -- minu puhastusraporti kokkuvõte
+
+## Meeskonna töö
+- [(https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/week-2/README.md)]
