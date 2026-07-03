@@ -14,10 +14,10 @@ Lisaks leidsin, et toodetel on 12 duplikaatset nime mis vajavad puhastamist.
    * Iga NULL väärtus ei ole ilmtingimata andmeviga. Näiteks puuduv `customer_id` esindas meie äriloogikas täiesti kehtivaid külalisoste (neid jäi pärast duplikaatide eemaldamist alles 988).
 
 ## Failid
-- `week1_sales_cleaning.sql` -- minu sales SQL päringud
-- `week1_products_cleaning.sql` -- minu products SQL päringud
-- `week1_sales_report.md`    -- minu puhastusraporti kokkuvõte
-- `week1_products_report.md`    -- minu puhastusraporti kokkuvõte
+- `week2_sales_cleaning.sql` -- minu sales SQL päringud
+- `week2_products_cleaning.sql` -- minu products SQL päringud
+- `week2_sales_report.md`    -- minu puhastusraporti kokkuvõte
+- `week2_products_report.md`    -- minu puhastusraporti kokkuvõte
 
 ## Meeskonna töö
 - [(https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/week-2/README.md)]
