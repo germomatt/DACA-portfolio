@@ -220,3 +220,86 @@ LIMIT 20;
 --Kõige suurema rea summaga toode on Õhuline sünteetiline sporditossud - klient on linnast Valga
 --TOP20 tooted on enim kategoorias : jalanõusid
 -- =============================TULEMUSED=============================
+
+-- =========================================================================
+--Harjutus 3B - Ühendame 3 tabelit kategooria kaupa
+
+SELECT
+    c.city AS linn,
+    p.category AS kategooria,
+    COUNT(s.sale_id) AS müüke,
+    SUM(s.total_price) AS kogumuuk
+FROM sales s
+INNER JOIN customers c ON s.customer_id = c.customer_id
+INNER JOIN products p ON s.product_id = p.product_id
+GROUP BY c.city, p.category
+ORDER BY kogumuuk DESC;
+
+-- =============================TULEMUSED=============================
+--Kõige kasulikum linn + kategooria on Talllinn oma jalanõude müügiga, napil teisel kohal on Tallinna meeste riided
+--Tartu kõige kasumlikum on meeste riided ja jalanõud on teisel kohal napilt - suures pildis võib liigitada sarnane
+--Turunduse seisukohalt saab teada kehva müügiga kaubad, et neid boostida ja kasumlikud müügid saaks keerata kampaaniatega veel suurema käibele.
+-- =============================TULEMUSED=============================
+
+--Päring 1: TOP 20 klienti koos tootekategooriatega
+SELECT
+    c.first_name || ' ' || c.last_name AS klient,
+    c.city AS linn,
+    p.category AS kategooria,
+    SUM(s.total_price) AS kogumuuk
+FROM sales s
+INNER JOIN customers c ON s.customer_id = c.customer_id
+INNER JOIN products p ON s.product_id = p.product_id
+GROUP BY c.customer_id, c.first_name, c.last_name, c.city, p.category
+ORDER BY kogumuuk DESC
+LIMIT 20;
+
+--Päring 2: Kadunud kliendid linnade kaupa
+SELECT
+    c.city AS linn,
+    COUNT(*) AS kadunud_kliente
+FROM customers c
+LEFT JOIN sales s ON c.customer_id = s.customer_id
+WHERE s.sale_id IS NULL
+GROUP BY c.city
+ORDER BY kadunud_kliente DESC;
+
+--Päring 3: Müümata tooted kategooriate kaupa
+SELECT
+    p.category AS kategooria,
+    COUNT(*) AS müümata_tooteid,
+    ROUND(AVG(p.retail_price), 2) AS keskmine_hind
+FROM products p
+LEFT JOIN sales s ON p.product_id = s.product_id
+WHERE s.sale_id IS NULL
+GROUP BY p.category
+ORDER BY müümata_tooteid DESC;
+
+----TEADMISTE Kontroll
+--1. A 
+--2. D
+--3.
+
+
+--Süvendavad teemad (vabatahtlik)
+----FULL OUTER JOIN:
+--Näitab KÕIK read MÕLEMAST tabelist — ka need, kus sobivust pole:
+SELECT c.first_name, s.sale_id
+FROM customers c
+FULL OUTER JOIN sales s ON c.customer_id = s.customer_id
+WHERE c.customer_id IS NULL OR s.customer_id IS NULL;
+-- Näitab: kliendid ilma müükideta JA müügid ilma klientideta
+----CROSS JOIN:
+--Ühendab iga rea esimesest tabelist iga reaga teisest (kartesian product). Kasulik näiteks kõigi kombinatsioonide genereerimiseks:
+SELECT c.city, p.category
+FROM (SELECT DISTINCT city FROM customers) c
+CROSS JOIN (SELECT DISTINCT category FROM products) p;
+--Iseühendav JOIN (Self-Join):
+--Tabel ühendab iseendaga — kasulik hierarhiliste andmete jaoks:
+-- Leia kliendid, kes on samast linnast
+SELECT
+    a.first_name AS klient_1,
+    b.first_name AS klient_2,
+    a.city
+FROM customers a
+INNER JOIN customers b ON a.city = b.city AND a.customer_id < b.customer_id;
