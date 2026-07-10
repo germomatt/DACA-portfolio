@@ -41,7 +41,7 @@ Selle nädala peamine fookus oli ettevõtte **UrbanStyle** andmebaasi analüüsi
 * 🛠️ [SQL skript](week3_roll_d_muugikanalid.sql) | 📄 [Raport](week3_roll_d_muugikanalid%20Raport.sql) | 🖼️ [Visuaalne eelvaade](week3_roll_d_muugikanalid%20-%20screenshot.md)
 
 ---
-👥 **Meeskonnatöö:** 🔗 [Nädal 2 README](link-lisandub-hiljem)
+👥 **Meeskonnatöö:** 🔗 https://github.com/kolgalys-max/urbanstyle-team-3/blob/main/week-3/README.md
 
 ---
 
