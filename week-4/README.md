@@ -48,6 +48,7 @@ CTE (Common Table Expressions): Kasutasin WITH klauslit, et muuta TOP 3 päring 
 
 📂 Projekti failid
 ©️ Roll C: Inventuur ja tooted (Inventuuri statistika)
-🛠️ SQL skript | 📄 Raport | 🖼️ Tulemused: 1, 2, 3
+🛠️ AI kasutamine 
+| 📄 Raport | 🖼️ Tulemused: 1, 2, 3
 
 👥 Meeskonnatöö: 🔗 [Lisa link siia]
