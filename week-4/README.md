@@ -1,7 +1,7 @@
 📊 Nädal 4: SQL — Window Functions & Inventuuri Statistika
 Tiimi liige: GERMO MATT
 
-Alaülesande kaart: C (Inventuuri statistika)
+Alaülesande kaart: ©️ Roll C: Inventuur ja tooted (Inventuuri statistika)
 
 🎯 Käesoleva nädala eesmärk
 Selle nädala peamine fookus oli ettevõtte tootekategooriate, laoseisu ja müügistatistika süvaanalüüs. Eesmärk oli kasutada edasijõudnute SQL-tehnikaid (GROUP BY, HAVING ja Window Functions), et selgitada välja kõige tulusamad kategooriad, murekohad hinnastamises ning järjestada iga kategooria parimad tooted.
@@ -47,7 +47,7 @@ DENSE_RANK() edetabelite koostamiseks müügikoguste põhjal, et vältida toodet
 CTE (Common Table Expressions): Kasutasin WITH klauslit, et muuta TOP 3 päring loetavamaks ja loogilisemaks.
 
 📂 Projekti failid
-©️ Roll C: Inventuur ja tooted (Inventuuri statistika)
+
 📄 Raport week4_inventory_aggregation RAPORT.sql
 🖼️ week4_inventory_aggregation.sql
 
