@@ -1,6 +1,6 @@
-📊 Nädal 5: Visualiseerimise disain
-Tiimi liige: GERMO MATT
-Alaülesande kaart: D
+📊 Nädal 5: Visualiseerimise disain                                       
+Tiimi liige: GERMO MATT                              
+Alaülesande kaart: D Investori Dashboard
 
 🎯 Käesoleva nädala eesmärk
 
