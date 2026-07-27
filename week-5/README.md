@@ -31,4 +31,4 @@ Kasutasin AI-d andmete visualiseerimise disainipõhimõtete ja Power BI DAX vale
 📊 Power BI töölaud (lõplik): week-5_dashboard_Germo.pbix
 
 
-👥 Meeskonnatöö: 🔗 [Lisa link siia]
+👥 Meeskonnatöö: 🔗 [https://github.com/kolgalys-max/urbanstyle-team-3/tree/main/week-5]
