@@ -24,9 +24,11 @@ Kasutasin AI-d andmete visualiseerimise disainipõhimõtete ja Power BI DAX vale
 
 📂 Projekti failid
 ©️ Roll D: Investor Dashboard (koondvaade — A+B+C süntees)
-🖼️ Ekraanipilt: dashboard_screenshot.png
-📊 Power BI töölaud (esmane): esmane dashboard.pbix
-📄 PDF Raport: Urbanstyle OÜ - Investori Dashboard roll D_Germo.pdf
+
+🖼️ Ekraanipilt: dashboard_screenshot.png                                 
+📊 Power BI töölaud (esmane): esmane dashboard.pbix                           
+📄 PDF Raport: Urbanstyle OÜ - Investori Dashboard roll D_Germo.pdf                      
 📊 Power BI töölaud (lõplik): week-5_dashboard_Germo.pbix
+
 
 👥 Meeskonnatöö: 🔗 [Lisa link siia]
