@@ -48,7 +48,10 @@ CTE (Common Table Expressions): Kasutasin WITH klauslit, et muuta TOP 3 päring 
 
 📂 Projekti failid
 ©️ Roll C: Inventuur ja tooted (Inventuuri statistika)
-🛠️ AI kasutamine 
-| 📄 Raport | 🖼️ Tulemused: 1, 2, 3
+📄 Raport week4_inventory_aggregation RAPORT.sql
+🖼️ week4_inventory_aggregation.sql
 
-👥 Meeskonnatöö: 🔗 [Lisa link siia]
+🛠️ AI kasutamine 
+Kasutasin AI abi, et leida SQL-i CTE abinimekirja kaudu igast tootekategooriast kolm enim müüdud toodet ning tuua välja nende täpsed müügi- ja käibenumbrid.
+
+👥 Meeskonnatöö: 🔗 [https://github.com/kolgalys-max/urbanstyle-team-3/tree/main/week-4]
