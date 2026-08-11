@@ -1,0 +1,6 @@
+id,customer_id,sale_date,total_amount,name,city
+1,101,2026-03-01,50.0,Mari Maasikas,Tallinn
+2,102,2026-03-03,120.0,Jüri Tamm,Tartu
+3,101,2026-03-10,30.0,Mari Maasikas,Tallinn
+4,103,2026-03-12,80.0,Kati Kask,Pärnu
+5,104,2026-03-15,95.0,Toomas Kivi,Tallinn
