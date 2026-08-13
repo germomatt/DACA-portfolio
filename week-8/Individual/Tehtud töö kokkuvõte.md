@@ -1,7 +1,7 @@
 # Roll B: Andmete transformatsioon ja agregeerimine
 
 ## Ülevaade
-Minu ülesandeks tiimitöös oli **Roll B** – andmete puhastamise, transformatsiooni ja agregeerimise mooduli loomine[cite: 1]. Töö tulemusena valmis modulaarne Pythoni skript `transform.py` ning seda verifitseeriv ja tulemusi esitlev Jupyter Notebook `week8RollB.ipynb`.
+Minu ülesandeks tiimitöös oli **Roll B** – andmete puhastamise, transformatsiooni ja agregeerimise mooduli loomine. Töö tulemusena valmis modulaarne Pythoni skript `transform.py` ning seda verifitseeriv ja tulemusi esitlev Jupyter Notebook `week8RollB.ipynb`.
 
 ---
 
